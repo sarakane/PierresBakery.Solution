@@ -14,6 +14,13 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
+    public void GetCost_ReturnsCost_int()
+    {
+      Pastry newPastry = new Pastry(0);
+      Assert.AreEqual(0, newPastry.Cost);
+    }
+
+    [TestMethod]
     public void CalculatePastryCost_CalculatesCostOfPastryOrderInput3_void()
     {
       Pastry newPastry = new Pastry(3);
