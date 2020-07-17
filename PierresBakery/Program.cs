@@ -8,7 +8,7 @@ namespace PierresBakery
     public static void Main()
     {
       //Initialize new instances of Bread and Pastry classes
-      Bread newBread = new Bread();
+      
       Pastry newPastry = new Pastry();
 
       //Welcome message
@@ -41,7 +41,9 @@ namespace PierresBakery
       }
 
       //Calculate costs of bread and pastry orders and output total to user
-      int breadCost = newBread.CalculateBreadCost(breadOrder);
+      Bread newBread = new Bread(breadOrder);
+      newBread.CalculateBreadCost();
+      int breadCost = newBread.Cost;
       int pastryCost = newPastry.CalculatePastryCost(pastryOrder);
       Console.WriteLine("Your total is: $" + (breadCost + pastryCost));
     }

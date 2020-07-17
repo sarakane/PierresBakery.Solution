@@ -2,12 +2,18 @@ namespace PierresBakery.Models
 {
   public class Bread
   {
-    public int CalculateBreadCost(int breadAmount)
+    public int Cost {get; set;}
+    public int OrderAmount { get; } 
+
+    public Bread(int amount)
     {
-      int cost = 0;
-      cost += ((breadAmount/3)* 10);
-      cost += ((breadAmount % 3) * 5);
-      return cost;
+      Cost = 0;
+      OrderAmount = amount;
+    }
+    public void CalculateBreadCost()
+    {
+      Cost += ((OrderAmount/3)* 10);
+      Cost += ((OrderAmount % 3) * 5);
     }
   }
 }
