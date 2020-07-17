@@ -17,7 +17,7 @@ namespace PierresBakery.Tests
     public void CalculatePastryCost_ReturnsCostOfPastryOrder_int()
     {
       Pastry newPastry = new Pastry();
-      Assert.AreEqual(3, newPastry.CalculatePastryCost(3));
+      Assert.AreEqual(5, newPastry.CalculatePastryCost(3));
     }
   }
 }
