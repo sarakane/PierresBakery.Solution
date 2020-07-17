@@ -49,5 +49,9 @@ Once the repository has been cloned, navigate to the to the PierresBakery.Tests 
 * Visual Studio Code (code editor)
 * C#/.NET
 
+## Acknowledgements
+* ASCII Text Art from [www.patorjk.com](http://www.patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
+* ASCII Bread Art from [https://ascii.co.uk/](https://ascii.co.uk/art/bread)
+
 ## License
 This software is licensed under the MIT license. Copyright (c) 2020 Sara Kane.
