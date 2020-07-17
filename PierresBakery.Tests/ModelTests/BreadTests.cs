@@ -36,9 +36,9 @@ namespace PierresBakery.Tests
       newBread.CalculateBreadCost();
       Assert.AreEqual(10, newBread.Cost);
     }
-    
+
     [TestMethod]
-    public void CalculateBreadCost_CalculatesCostOfBreadOrderInput10_void()
+    public void CalculateBreadCost_CalculatesCostOfBreadOrderInput0_void()
     {
       Bread newBread = new Bread(0);
       newBread.CalculateBreadCost();
