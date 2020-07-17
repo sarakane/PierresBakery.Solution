@@ -14,11 +14,35 @@ namespace PierresBakery.Tests
     } 
 
     [TestMethod]
-    public void CalculateBreadCost_ReturnsCostOfBreadOrder_int()
+    public void CalculateBreadCost_CalculatesCostOfBreadOrderInput3_void()
     {
       Bread newBread = new Bread(3);
       newBread.CalculateBreadCost();
       Assert.AreEqual(10, newBread.Cost);
+    }
+
+    [TestMethod]
+    public void CalculateBreadCost_CalculatesCostOfBreadOrderInput4_void()
+    {
+      Bread newBread = new Bread(4);
+      newBread.CalculateBreadCost();
+      Assert.AreEqual(15, newBread.Cost);
+    }
+
+    [TestMethod]
+    public void CalculateBreadCost_CalculatesCostOfBreadOrderInput2_void()
+    {
+      Bread newBread = new Bread(2);
+      newBread.CalculateBreadCost();
+      Assert.AreEqual(10, newBread.Cost);
+    }
+    
+    [TestMethod]
+    public void CalculateBreadCost_CalculatesCostOfBreadOrderInput10_void()
+    {
+      Bread newBread = new Bread(0);
+      newBread.CalculateBreadCost();
+      Assert.AreEqual(0, newBread.Cost);
     }
   }
 }

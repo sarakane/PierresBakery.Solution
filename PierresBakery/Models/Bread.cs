@@ -2,18 +2,26 @@ namespace PierresBakery.Models
 {
   public class Bread
   {
-    public int Cost {get; set;}
+    // Cost needs to be written this way to be able to change the value in the CalculateBreadCost method, but not change the value outside of the class
+    private int _cost;
+    public int Cost 
+    {
+      get
+      {
+        return _cost;
+      }
+    }
     public int OrderAmount { get; } 
 
     public Bread(int amount)
     {
-      Cost = 0;
+      _cost = 0;
       OrderAmount = amount;
     }
     public void CalculateBreadCost()
     {
-      Cost += ((OrderAmount/3)* 10);
-      Cost += ((OrderAmount % 3) * 5);
+      _cost += ((OrderAmount/3)* 10);
+      _cost += ((OrderAmount % 3) * 5);
     }
   }
 }
