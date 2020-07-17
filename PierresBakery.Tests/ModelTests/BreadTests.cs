@@ -21,6 +21,13 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
+    public void GetOrderAmount_ReturnsOrderAmount_int()
+    {
+      Bread newBread = new Bread(1);
+      Assert.AreEqual(1, newBread.OrderAmount);
+    }
+
+    [TestMethod]
     public void CalculateBreadCost_CalculatesCostOfBreadOrderInput3_void()
     {
       Bread newBread = new Bread(3);
