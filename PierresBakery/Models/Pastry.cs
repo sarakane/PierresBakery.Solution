@@ -3,7 +3,7 @@ namespace PierresBakery.Models
   public class Pastry
   {
     // Cost needs to be written this way to be able to change the value in the CalculateBreadCost method, but not change the value outside of the class
-    private int _cost;
+    private int _cost = 0;
     public int Cost 
     {
       get
@@ -15,7 +15,6 @@ namespace PierresBakery.Models
 
     public Pastry(int amount)
     {
-      _cost = 0;
       OrderAmount = amount;
     }
     public void CalculatePastryCost()
