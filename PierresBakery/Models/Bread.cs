@@ -4,7 +4,10 @@ namespace PierresBakery.Models
   {
     public int CalculateBreadCost(int breadAmount)
     {
-      return -1;
+      int cost = 0;
+      cost += ((breadAmount/3)* 10);
+      cost += ((breadAmount % 3) * 5);
+      return cost;
     }
   }
 }
