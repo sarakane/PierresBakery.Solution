@@ -7,10 +7,6 @@ namespace PierresBakery
   {
     public static void Main()
     {
-      //Initialize new instances of Bread and Pastry classes
-      
-      Pastry newPastry = new Pastry();
-
       //Welcome message
       Console.Write("    ____  _                    _          ____        __                       _______\n   / __ \\(____  _____________ ( )_____   / __ )____ _/ /_____  _______  __    /       )\n  / /_/ / / _ \\/ ___/ ___/ _ \\|// ___/  / __  / __ `/ //_/ _ \\/ ___/ / / /   /_____   | ______\n / ____/ /  __/ /  / /  /  __/ (__  )  / /_/ / /_/ / ,< /  __/ /  / /_/ /   (  '   ) / /    __\\   _____\n/_/   /_/\\___/_/  /_/   \\___/ /____/  /_____/\\__,_/_/|_|\\___/_/   \\__, /     |.  '| / |     \\ |  /     ))\n                                                                 /____/      |____|/  |`-----'  /_____))\n                                                                                       `-----'  `------'\n");
       Console.WriteLine("Welcome to Pierre's Bakery!");
@@ -40,12 +36,16 @@ namespace PierresBakery
         pastryOrderSuccess = int.TryParse(Console.ReadLine(), out pastryOrder);
       }
 
-      //Calculate costs of bread and pastry orders and output total to user
+      // Initialize new instances of Bread and Pastry classes
       Bread newBread = new Bread(breadOrder);
+      Pastry newPastry = new Pastry(pastryOrder);
+
+      //Calculate costs of bread and pastry orders and output total to user
       newBread.CalculateBreadCost();
       int breadCost = newBread.Cost;
-      int pastryCost = newPastry.CalculatePastryCost(pastryOrder);
-      Console.WriteLine("Your total is: $" + (breadCost + pastryCost));
+      newPastry.CalculatePastryCost();
+      int pastryCost = newPastry.Cost;
+      Console.WriteLine("Thank you for your order! Your total is: $" + (breadCost + pastryCost));
     }
   }
 }

@@ -2,13 +2,18 @@ namespace PierresBakery.Models
 {
   public class Pastry
   {
-    public int CalculatePastryCost(int pastryAmount)
-    {
-      int cost = 0;
-      cost += ((pastryAmount/3) * 5);
-      cost +=((pastryAmount % 3) * 2);
+    public int Cost {get; set;}
+    public int OrderAmount { get; } 
 
-      return cost;
+    public Pastry(int amount)
+    {
+      Cost = 0;
+      OrderAmount = amount;
+    }
+    public void CalculatePastryCost()
+    {
+      Cost += ((OrderAmount/3) * 5);
+      Cost +=((OrderAmount % 3) * 2);
     }
   }
 }
